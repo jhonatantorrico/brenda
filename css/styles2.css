@@ -74,17 +74,34 @@ section {
 
 @media (max-width: 720px) {
     body{
-        padding: 25px 5px;
+        padding: 25px 0px;
     }
     .texto p{
         font-size: 18px;
     }
+    .contenedor-cuerpo{
+        width: 95%;
+    }
 }
 @media (max-width: 480px) {
     body{
-        padding: 25px 5px;
+        padding: 25px 0px;
     }
     .texto p{
         font-size: 17.8px;
+    }
+    .contenedor-cuerpo{
+        width: 99%;
+    }
+}
+@media (max-width: 480px) {
+    body{
+        padding: 25px 0px;
+    }
+    .texto p{
+        font-size: 17.8px;
+    }
+    .contenedor-cuerpo{
+        width: 99%;
     }
 }
