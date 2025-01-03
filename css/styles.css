@@ -1,0 +1,331 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/* cabecera - el corazon */
+header {
+    display: block;
+    height: 200px;
+    padding: 25px;
+    background: #010101;
+    border-bottom: 2px solid #fff;
+    border-radius: 0 0 15px 15px;
+}
+.contenedor-cabecera {
+    display: flex;
+    justify-content: space-around;
+}
+.corazon {
+    font-size: 120px;
+    color: #ff0000;
+    filter: drop-shadow(-5px 8px 8px rgba(242, 0, 68, 0.6));
+    animation: latir 1s infinite;
+}
+@keyframes latir {
+    0%, 100% {
+        transform: scale(1) ;
+    }
+    50% {
+        transform: scale(1.2) ;
+    }
+}
+
+/* cabecera - el titulo */
+.texto-cambiante {
+    top: 40px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    color: #7C7C7C;
+    font-weight: 700;
+    font-size: 45px;
+    box-sizing: content-box;
+}
+.texto {
+    font-family: "Spicy Rice", serif;
+    font-size: 45px;
+}
+.roles-contenedor {
+    overflow: hidden;
+    position: relative;
+}
+.role {
+    font-family: "Spicy Rice", serif;
+    display: block;
+    height: 100%;
+    padding-left: 6px;
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    animation: role-cambiante 6s ease-in infinite;
+}
+@keyframes role-cambiante {
+    25% {
+        transform: translateY(-102%);
+    }
+    50% {
+        transform: translateY(-100%);
+    }
+    75% {
+        transform: translateY(-202%);
+    }
+    100% {
+        transform: translateY(-200%);
+    }
+}
+
+/* cabecera - dedicatoria */
+.dedicatoria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dedicatoria p {
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+/* Año */
+.numeros-cambiante {
+    top: 40px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    color: #000;
+    font-weight: 700;
+    font-size: 60px;
+    box-sizing: content-box;
+}
+.numeros-cambiante p {
+    font-size: 60px;
+    font-family: "Sixtyfour", serif;
+}
+.roles-numeros {
+    overflow: hidden;
+    position: relative;
+}
+.role-numero {
+    font-family: "Sixtyfour", serif;
+    display: block;
+    height: 100%;
+    animation: numero-cambiante 5s ease-in-out 1;
+}
+@keyframes numero-cambiante {
+    0%, 100% {
+        transform: translateY(-102%);
+    }
+    50% {
+        transform: translateY(-100%);
+    }
+}
+
+/* cuerpo - musica */
+.contenedor-cuerpo {
+    min-height: 100vh;
+    background: #c9ced3;
+    display: grid;
+    place-items: center;
+    gap: 20px;
+    padding: 25px;
+    background: linear-gradient(249deg, #12c2e9, #c471ed, #f64f59);
+    background-size: 600% 600%;
+    animation: cuerpoAnimacion 30s ease infinite;
+}
+@keyframes cuerpoAnimacion {
+    0% {
+        background-position: 0% 67%;
+    }
+    50% {
+        background-position: 100% 34%;
+    }
+    100% {
+        background-position: 0% 67%;
+    }
+}
+.contenedor {
+    height: 220px;
+    width: 350px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 20px;
+}
+.contenedor h2 {
+    font-size: 23px;
+    margin: 0;
+    text-align: center;
+}
+.contenedor h3 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+    margin: 5px 0 0;
+}
+.contenedor .progressBar {
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 40px 20px;
+    width: 90%;
+    height: 4px;
+}
+.contenedor .progressBar .progress {
+    background: #242323;
+    border-radius: 5px;
+    width: 0%;
+    height: 100%;
+    transition: width 0.1s linear;
+}
+.contenedor .progressBar .duracion {
+    position: relative;
+    top: -25px;
+    display: flex;
+    justify-content: space-between;
+}
+/* controles */
+.contenedor .controles {
+    position: relative;
+    top: -15px;
+    left: 80px;
+    width: 200px;
+}
+.contenedor .controles ion-icon {
+    font-size: 30px;
+    color: #010101;
+    margin-right: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Carrusel */
+.carrusel {
+    aspect-ratio: 10/16;
+    width: 300px;
+    position: relative;
+    display: flex;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+}
+.carrusel img{
+    width: 100%;
+    left: 0;
+    position: sticky;
+    object-fit: cover;
+    border-radius: 5px;
+    scroll-snap-align: center;
+}
+
+/* contenedor final */
+.texto-ultimo {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    margin: 10px;
+}
+.contenedor-final {
+    background: rgba(250, 250, 250, 0.37);
+    padding: 7px;
+    border-radius: 7px;
+}
+.contenedor-final img {
+    border-radius: 7px;
+}
+footer {
+    height: 40px;
+    background: #000;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: right;
+    padding: 10px;
+    font-size: 20px;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+    header{
+        height: 150px;
+        padding: 15px;
+    }
+    .corazon{
+        font-size: 80px;
+    }
+    .texto{
+        font-size: 38px;
+    }
+    .role{
+        font-size: 38px;
+    }
+}
+@media (max-width: 570px) {
+    .corazon{
+        font-size: 68px;
+    }
+    .texto{
+        font-size: 33px;
+    }
+    .role{
+        font-size: 33px;
+    }
+}
+@media (max-width: 488px) {
+    header{
+        height: 135px;
+    }
+    .corazon{
+        font-size: 50px;
+    }
+    .texto{
+        font-size: 26px;
+    }
+    .role{
+        font-size: 26px;
+    }
+    .dedicatoria p{
+        font-size: 16px;
+    }
+}
+@media (max-width: 390px) {
+    header{
+        padding: 5px;
+    }
+    .corazon{
+        margin-top: 7px;
+        font-size: 48px;
+    }
+    .contenedor{
+        height: 190px;
+        width: 100%;
+    }
+    .contenedor .controles{
+        left: 3.5rem;
+    }
+}
+@media (max-width: 368px) {
+    header{
+        padding: 4px;
+    }
+    .corazon{
+        font-size: 40px;
+    }
+    .texto{
+        font-size: 24px;
+    }
+    .role{
+        font-size: 24px;
+    }
+    .contenedor .controles{
+        left: 2.2rem;
+    }
+    .carrusel{
+        width: 100%;
+    }
+}

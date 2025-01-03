@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/* cuerpo */
+body {
+    background: linear-gradient(150deg, #12c2e9, #c471ed, #f64f59);
+    padding: 5%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor-cuerpo {
+    background-color: #fff;
+    min-height: 90vh;
+    border-radius: 20px;
+}
+#titulo {
+    font-size: 25px;
+    text-align: center;
+    margin: 15px;
+}
+.rosa-marchita {
+    text-align: center;
+    margin: 25px 0 15px;
+}
+.rosa-marchita h2 {
+    font-size: 50px;
+}
+.texto {
+    margin: 25px;
+}
+.texto p {
+    font-size: 22px;
+    margin: 15px;
+}
+.emoji-corazon {
+    font-size: 25px;
+    color: #ff0000;
+    text-align: center;
+    animation: late 3s infinite;
+}
+@keyframes late {
+    0%, 100% {
+        transform: scale(1) ;
+    }
+    50% {
+        transform: scale(1.2) ;
+    }
+}
+.texto-final {
+    font-size: 22px;
+    text-align: center;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor-video {
+    width: 360px;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: rgb(150, 150, 150) 5px 5px 10px 5px inset;
+    border-radius: 7px;
+    margin: 20px;
+    padding: 5px;
+}
+.contenedor-video video {
+    border-radius: 7px;
+}
+
+@media (max-width: 720px) {
+    body{
+        padding: 25px 5px;
+    }
+    .texto p{
+        font-size: 18px;
+    }
+}
+@media (max-width: 480px) {
+    body{
+        padding: 25px 5px;
+    }
+    .texto p{
+        font-size: 17.8px;
+    }
+}
